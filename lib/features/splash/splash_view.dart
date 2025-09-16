@@ -28,26 +28,45 @@ class _SplashViewState extends State<SplashView> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: AppColors.background,
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            const Icon(
-              Icons.movie,
-              size: 100,
-              color: AppColors.accent,
-            ),
-            const SizedBox(height: 24),
-            const Text(
-              AppStrings.appName,
-              style: AppTextStyles.heading1,
-            ),
-            const SizedBox(height: 16),
-            const CircularProgressIndicator(
-              color: AppColors.accent,
-            ),
-          ],
+      body: Container(
+        decoration: const BoxDecoration(
+          gradient: AppColors.backgroundGradient,
+        ),
+        child: Center(
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.center,
+            children: [
+              Container(
+                padding: const EdgeInsets.all(20),
+                decoration: BoxDecoration(
+                  color: AppColors.primary,
+                  borderRadius: BorderRadius.circular(20),
+                ),
+                child: const Icon(
+                  Icons.movie,
+                  size: 80,
+                  color: AppColors.white,
+                ),
+              ),
+              const SizedBox(height: 32),
+              const Text(
+                AppStrings.appName,
+                style: AppTextStyles.heading2,
+              ),
+              const SizedBox(height: 8),
+              Text(
+                'Discover Amazing Movies',
+                style: AppTextStyles.bodyLarge.copyWith(
+                  color: AppColors.white70,
+                ),
+              ),
+              const SizedBox(height: 40),
+              const CircularProgressIndicator(
+                color: AppColors.primary,
+                strokeWidth: 3,
+              ),
+            ],
+          ),
         ),
       ),
     );

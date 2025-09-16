@@ -47,13 +47,13 @@ class MovieDetailView extends StatelessWidget {
       height: 300,
       width: double.infinity,
       color: AppColors.surface,
-      child: const Center(
-        child: Icon(
-          Icons.movie,
-          size: 100,
-          color: AppColors.accent,
+        child: const Center(
+          child: Icon(
+            Icons.movie,
+            size: 100,
+            color: AppColors.primary,
+          ),
         ),
-      ),
     );
   }
 
@@ -70,7 +70,7 @@ class MovieDetailView extends StatelessWidget {
           const SizedBox(height: 8),
           Row(
             children: [
-              const Icon(Icons.star, color: AppColors.accent, size: 20),
+                      const Icon(Icons.star, color: AppColors.warning, size: 20),
               const SizedBox(width: 4),
               const Text('8.5', style: AppTextStyles.bodyMedium),
               const SizedBox(width: 16),
